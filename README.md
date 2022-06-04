@@ -21,3 +21,10 @@ This theme is all about Motorcycles(Bikes) like: Sport bikes, naked bikes, adven
     ```powershell
         dotnet-aspnet-codegenerator razorpage -m Bike -dc RazorPagesBikeContext -udl -outDir Pages/Bikes --referenceScriptLibraries -sqlite
     ```
+
+## EFs migration commands
+
+    ```powershell
+        dotnet ef migrations add InitialCreate
+        dotnet ef database update
+    ```
