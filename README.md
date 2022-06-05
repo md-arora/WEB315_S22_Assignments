@@ -23,6 +23,7 @@ This theme is all about Motorcycles(Bikes) like: Sport bikes, naked bikes, adven
     ```
 
 ## EFs migration commands
+    The terminal command to create initial database schemea using Entity Framework Migration feature
 
     ```powershell
         dotnet ef migrations add InitialCreate
