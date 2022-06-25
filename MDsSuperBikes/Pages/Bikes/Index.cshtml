@@ -10,6 +10,18 @@
 <p>
     <a asp-page="Create">Create New</a>
 </p>
+
+<form>
+    <p>
+        Company:
+        <select asp-for="BikeCompanyName" asp-items="Model.Companies">
+            <option value="">All</option>
+        </select>
+        Model: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
@@ -23,7 +35,13 @@
                 @Html.DisplayNameFor(model => model.Bike[0].BikeType)
             </th>
             <th>
+                @Html.DisplayNameFor(model => model.Bike[0].Torque)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Bike[0].EngineCC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bike[0].TopSpeed)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Bike[0].DateOfLaunch)
@@ -44,7 +62,13 @@
                 @Html.DisplayFor(modelItem => item.BikeType)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Torque)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.EngineCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TopSpeed)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DateOfLaunch)
