@@ -13,6 +13,10 @@
 
 <form>
     <p>
+        Company:
+        <select asp-for="BikeCompanyName" asp-items="Model.Companies">
+            <option value="">All</option>
+        </select>
         Model: <input type="text" asp-for="SearchString" />
         <input type="submit" value="Filter" />
     </p>
