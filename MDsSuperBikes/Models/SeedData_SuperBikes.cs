@@ -26,9 +26,7 @@ namespace RazorPagesBike.Models
                         ModelName = "Ninja ZX10R",
                         CompanyName = "Kawasaki",
                         BikeType = "Super Sport",
-                        Torque = "113.50 Nm @ 11600 RPM",
                         EngineCC = 998,
-                        TopSpeed = 299,
                         DateOfLaunch = DateTime.Parse("2021-08-23"),
                     },
                     new Bike
@@ -36,9 +34,7 @@ namespace RazorPagesBike.Models
                         ModelName = "Hayabusa",
                         CompanyName = "Suzuki",
                         BikeType = "Super Sport",
-                        Torque = "155.00 Nm @ 7200 RPM",
                         EngineCC = 1400,
-                        TopSpeed = 310,
                         DateOfLaunch = DateTime.Parse("2021-01-21"),
                     },
                     new Bike
@@ -46,9 +42,7 @@ namespace RazorPagesBike.Models
                         ModelName = "Classic 350",
                         CompanyName = "Royal Enfield",
                         BikeType = "Tourer",
-                        Torque = "27 Nm @ 4000 rpm",
                         EngineCC = 349,
-                        TopSpeed = 120,
                         DateOfLaunch = DateTime.Parse("1909-06-03"),
                     },
                     new Bike
@@ -56,9 +50,7 @@ namespace RazorPagesBike.Models
                         ModelName = "Ninja 400",
                         CompanyName = "Kawasaki",
                         BikeType = "Sport-Tourer",
-                        Torque = "38.00 Nm @ 8000 RPM",
                         EngineCC = 399,
-                        TopSpeed = 185,
                         DateOfLaunch = DateTime.Parse("2008-07-13"),
                     },
                     new Bike
@@ -66,9 +58,7 @@ namespace RazorPagesBike.Models
                         ModelName = "R1M",
                         CompanyName = "Yamaha",
                         BikeType = "Hyper Sport",
-                        Torque = "113.30 Nm @ 11500 RPM",
                         EngineCC = 999,
-                        TopSpeed = 318,
                         DateOfLaunch = DateTime.Parse("2020-09-25"),
                     }
                 );

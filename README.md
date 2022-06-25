@@ -27,20 +27,5 @@ This theme is all about Motorcycles(Bikes) like: Sport bikes, naked bikes, adven
 
     ```powershell
         dotnet ef migrations add InitialCreate
-        dotnet ef database updat
-    ```
-
-## Migration commands to add new fields of data
-
-    ```powershell
-        dotnet ef migration add Torque
-        dotnet ef migration add TopSpeed
-        dotnet ef database update
-    ```
-
-## commands to add new validation in maigration
-
-    ```powershell
-        dotnet ef migrations add New_DataAnnotations
         dotnet ef database update
     ```
