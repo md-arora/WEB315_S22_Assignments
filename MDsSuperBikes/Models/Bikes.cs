@@ -9,7 +9,10 @@ namespace RazorPagesBike.Models
         public string ModelName { get; set; }
         public string CompanyName { get; set; }
         public string BikeType { get; set; }
+        public string Torque { get; set; }
         public int EngineCC { get; set; }
+        public int TopSpeed { get; set; }
+
         [DataType(DataType.Date)]
         public DateTime DateOfLaunch { get; set; }
     }
