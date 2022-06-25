@@ -29,3 +29,11 @@ This theme is all about Motorcycles(Bikes) like: Sport bikes, naked bikes, adven
         dotnet ef migrations add InitialCreate
         dotnet ef database update
     ```
+
+## Migration commands to add new fields of data
+
+    ```powershell
+        dotnet ef migration add Torque
+        dotnet ef migration add TopSpeed
+        dotnet ef database update
+    ```
