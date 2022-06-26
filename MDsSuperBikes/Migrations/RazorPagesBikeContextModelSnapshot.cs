@@ -22,13 +22,9 @@ namespace MDsSuperBikes.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("BikeType")
-                        .IsRequired()
-                        .HasMaxLength(60)
                         .HasColumnType("TEXT");
 
                     b.Property<string>("CompanyName")
-                        .IsRequired()
-                        .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("DateOfLaunch")
@@ -38,16 +34,6 @@ namespace MDsSuperBikes.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ModelName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("TopSpeed")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Torque")
-                        .IsRequired()
-                        .HasMaxLength(70)
                         .HasColumnType("TEXT");
 
                     b.HasKey("ID");
