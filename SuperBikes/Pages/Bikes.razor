@@ -4,15 +4,21 @@
 <button @onclick="AddBike">Show Bikes</button>
 
 <ol>
-    @foreach (var bike in bikesList)
+    @for (int i = 0; i < bikesList.Count(); i++)
     {
-        <li>@bike.FullModelName</li>
+        if (i == numbersToShow)
+        {
+          break;  
+        }
+        <li>@bikesList[i].FullModelName</li>
     }
 </ol>
 
+<input type="number" @bind="numbersToShow">
+
 @code {
     private List<NewBike> bikesList = new();
-
+    private int numbersToShow = 5;
 
     private void AddBike(){
 
