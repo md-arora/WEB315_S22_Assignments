@@ -1,7 +1,15 @@
 @page "/"
 
-<h1>Hello, world!</h1>
+<h1>@myName</h1>
 
-Welcome to your new app.
+<h3>Welcome to the @themeName blazor app.</h3>
+<p>Current date and time @currentDateTime</p>
 
 <SurveyPrompt Title="How is Blazor working for you?" />
+
+
+@code{
+    private string themeName = "Super Bikes";
+    private string myName = "Mohit (MD Arora)";
+    private DateTime currentDateTime = DateTime.Now;
+}
