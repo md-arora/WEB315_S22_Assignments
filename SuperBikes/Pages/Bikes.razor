@@ -1,6 +1,58 @@
 ﻿@page "/bikes"
 <h3>Bikes</h3>
 
-@code {
+<button @onclick="AddBike">Show Bikes</button>
 
+<ol>
+    @foreach (var bike in bikesList)
+    {
+        <li>@bike.FullModelName</li>
+    }
+</ol>
+
+@code {
+    private List<NewBike> bikesList = new();
+
+
+    private void AddBike(){
+
+        
+    NewBike[]  bikes = {
+        new NewBike{
+            FullModelName = "Kawasaki Ninja H2"
+        },
+        new NewBike{
+            FullModelName = "Yamaha YZF R1M"
+        },
+        new NewBike{
+            FullModelName = "Suzuki Hayabusa gen3"
+        },
+        new NewBike{
+            FullModelName = "Kawasaki Ninja ZX10R"
+        },
+        new NewBike{
+            FullModelName = "Kawasaki Z1000"
+        }
+    };
+
+        bikesList.AddRange(bikes);
+
+        @* bikesList.AddRange(
+            new NewBike{
+                FullModelName = "Kawasaki Ninja H2"
+            },
+            new NewBike{
+                FullModelName = "Yamaha YZF R1M"
+            },
+            new NewBike{
+                FullModelName = "Suzuki Hayabusa gen3"
+            },
+            new NewBike{
+                FullModelName = "Kawasaki Ninja ZX10R"
+            },
+            new NewBike{
+                FullModelName = "Kawasaki Z1000"
+            }
+        ); *@
+    }
 }
