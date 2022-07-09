@@ -14,7 +14,7 @@
     }
 </ol>
 
-<input type="number" @bind="numbersToShow">
+<input type="number" @onchange="@(e => limitList(e.Value.ToString()))" min="0" max="@bikesList.Count()" value="5">
 
 @code {
     private List<NewBike> bikesList = new();
@@ -22,28 +22,7 @@
 
     private void AddBike(){
 
-        
-    NewBike[]  bikes = {
-        new NewBike{
-            FullModelName = "Kawasaki Ninja H2"
-        },
-        new NewBike{
-            FullModelName = "Yamaha YZF R1M"
-        },
-        new NewBike{
-            FullModelName = "Suzuki Hayabusa gen3"
-        },
-        new NewBike{
-            FullModelName = "Kawasaki Ninja ZX10R"
-        },
-        new NewBike{
-            FullModelName = "Kawasaki Z1000"
-        }
-    };
-
-        bikesList.AddRange(bikes);
-
-        @* bikesList.AddRange(
+        NewBike[]  bikes = {
             new NewBike{
                 FullModelName = "Kawasaki Ninja H2"
             },
@@ -59,6 +38,12 @@
             new NewBike{
                 FullModelName = "Kawasaki Z1000"
             }
-        ); *@
+        };
+
+        bikesList.AddRange(bikes);
+
+    }
+    private void limitList(string num){
+        numbersToShow = int.Parse(num);
     }
 }
