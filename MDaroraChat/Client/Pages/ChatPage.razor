@@ -62,17 +62,18 @@
         await hubConnection.StartAsync();
     }
 
-    async Task Send() => {
-        if(string.IsNullOrEmpty(userInput)){
-            await hubConnection.SendAsync("ReceiveAnonMessage", messageInput);
-        } else {
+    public async Task Send(){
+        if(!string.IsNullOrEmpty(userInput)){
             await hubConnection.SendAsync("SendMessage", userInput, messageInput);
+        } else {
+            await hubConnection.SendAsync("SendAnonMessage", messageInput);
         }
+
     }
     
-    async Task SendTyping() =>{
-        if(!string.IsNullOrEmpty(userInput)){
-            await hubConnection.SendAsync("UserTyping", userInput);
+    public async Task SendTyping(){
+        if(!string.IsNullOrEmpty(userInput)) {
+            await hubConnection.SendAsync("SendTypingToOthers", userInput);
         }
     }
 
